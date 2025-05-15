@@ -1,0 +1,3 @@
+retriver:
+  search_kwargs:
+    k: 2

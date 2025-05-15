@@ -7,7 +7,8 @@ authors = [{ name = "parsa", email = "parsa.miraghaie@gmail.com" }]
 requires-python = ">=3.12"
 dependencies = [
     "langchain-openai>=0.3.16",
- "pyapp[local-langchain]",
+    "langgraph>=0.4.3",
+    "pyapp[local-langchain]",
 ]
 
 [project.scripts]

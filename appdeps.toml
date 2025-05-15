@@ -17,7 +17,7 @@ name = "airplane-simple-retriever"
 inRepoPath = "./data"
 branchName = "heh"
 sourceBranch = "main"
-commitHash = "f72def4b2ef0f5ba20c6e2c31537d832ab31ec5bd5a4cabc01c1ed5bc70cf66b"
+commitHash = "72d9e82d42ac857afca0afb8cc328b1ab537032506b9bd8decc7f315466efe26"
 
 [project.dependencies]
 
