@@ -6,14 +6,16 @@ readme = "README.md"
 authors = [{ name = "parsa", email = "parsa.miraghaie@gmail.com" }]
 requires-python = ">=3.12"
 dependencies = [
+    "langchain-chroma>=0.1.2",
     "langchain-openai>=0.3.16",
     "langgraph>=0.4.3",
     "pyapp[local-langchain]",
 ]
 
 [project.scripts]
-generate = "airplane_simple_retriever.main:generate"
+generate = "airplane_simple_retriever.generate:generate"
 inference = "airplane_simple_retriever.main:inference"
+graph = "airplane_simple_retriever.main:get_graph"
 
 [build-system]
 requires = ["hatchling"]
@@ -21,7 +23,10 @@ build-backend = "hatchling.build"
 
 
 [dependency-groups]
-dev = ["ipykernel>=6.29.5"]
+dev = [
+    "ipykernel>=6.29.5",
+    "pyppeteer>=2.0.0",
+]
 
 [tool.uv.sources]
 pyapp = { git = "https://github.com/Parsa-Mir/app.git", subdirectory = "pyapp" }

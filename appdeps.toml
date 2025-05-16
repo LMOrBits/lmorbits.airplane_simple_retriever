@@ -13,11 +13,10 @@ type = "phoenix"
 host_type = "local"
 
 [vectordb]
-name = "airplane-simple-retriever"
+name = "airplane-simple-retriver"
 inRepoPath = "./data"
-branchName = "heh"
+branchName = "dev"
 sourceBranch = "main"
-commitHash = "72d9e82d42ac857afca0afb8cc328b1ab537032506b9bd8decc7f315466efe26"
 
 [project.dependencies]
 

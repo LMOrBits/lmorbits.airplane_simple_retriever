@@ -1,20 +1,12 @@
-from pyapp.utils.config import get_pyapp_config
-from airplane_simple_retriever.agent import get_agent
-from airplane_simple_retriever.schemas import Config, State
-from airplane_simple_retriever.utils import message_converter
-
+from airplane_simple_retriever.agent import retriver 
+from airplane_simple_retriever.schemas import  State
 from langgraph.graph import StateGraph
 from typing import Optional
 
-from pathlib import Path
-config = get_pyapp_config(Config, Path(__file__))
-agent = get_agent(config.retriver.search_kwargs)
 
 
 
-def retriver(state: State) -> State:
-    result = agent(state.messages)
-    return {"retriver_result": result}
+
 class Graph:
     name = "airplane-simple-retriever"
     nodes = {}
@@ -22,9 +14,11 @@ class Graph:
 
     def __init__(self):
         retriver_name = f"{self.name}.retriver"
+
         self.nodes = {
             "start": retriver_name,
-            "end": retriver_name
+            "end": retriver_name,
+ 
         }
     
     def add_workflow(self,graph: StateGraph , end_node: Optional[str] = None, start_node: Optional[str] = None ):

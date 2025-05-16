@@ -1,3 +1,9 @@
 retriver:
   search_kwargs:
     k: 2
+  similarity_threshold: 0.7
+
+data_config:
+  raw_data_path: raw_data/golden/qa.yaml
+  vector_store_path: vectordb/golden
+  table_name: golden
