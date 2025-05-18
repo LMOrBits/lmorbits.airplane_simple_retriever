@@ -6,10 +6,14 @@ from loguru import logger
 from functools import partial
 from airplane_simple_retriever.schemas import Config
 from pyapp.utils.config import get_pyapp_config
+from dotenv import load_dotenv
 # from langchain_chroma import Chroma
 
 here = Path(__file__).resolve()
 config_dir = find_config(here)
+env = find_config(here, "appdeps.env")
+load_dotenv(env)
+
 model = get_model_embeddings_from_config_dir(config_dir=config_dir)
 data_dir = get_data_dir(here)
 
