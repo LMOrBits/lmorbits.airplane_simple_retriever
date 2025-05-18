@@ -5,5 +5,5 @@ retriver:
 
 data_config:
   raw_data_path: raw_data/golden/qa.yaml
-  vector_store_path: vectordb/golden
+  vector_store_path: vectordb/golden/test4.db
   table_name: golden

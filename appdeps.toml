@@ -17,6 +17,7 @@ name = "airplane-simple-retriver"
 inRepoPath = "./data"
 branchName = "dev"
 sourceBranch = "main"
+commitHash = "dee1cb52c4e12ce8fc604f7e58c8db59672e5914ec331662943298ac2d53e6d1"
 
 [project.dependencies]
 
