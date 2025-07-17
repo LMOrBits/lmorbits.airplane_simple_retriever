@@ -18,7 +18,7 @@ class Config(BaseModel):
 class State(BaseModel):
     messages: list[AnyMessage]
     retriver_result_docs: list[Document] = []
-    retriver_results: list[str] = []
+    retriver_results: str = ""
     session_id: str
 
 
