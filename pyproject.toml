@@ -7,8 +7,8 @@ authors = [{ name = "parsa", email = "parsa.miraghaie@gmail.com" }]
 requires-python = ">=3.12"
 dependencies = ["langgraph>=0.4.3", "pyapp[local-langchain]"]
 
-# [project.scripts]
-# generate = "airplane_simple_retriever.generate:generate"
+[project.scripts]
+generate = "airplane_simple_retriever.generate:generate"
 # inference = "airplane_simple_retriever.main:inference"
 # graph = "airplane_simple_retriever.main:get_graph"
 
