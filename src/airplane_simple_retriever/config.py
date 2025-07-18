@@ -19,6 +19,7 @@ data_dir = get_data_dir(here)
 
 config = get_pyapp_config(Config, Path(__file__))
 vector_store_path = data_dir / config.data_config.vector_store_path
+vector_store_path.parent.mkdir(parents=True, exist_ok=True)
 raw_data_path = data_dir / config.data_config.raw_data_path
 table_name = config.data_config.table_name
 

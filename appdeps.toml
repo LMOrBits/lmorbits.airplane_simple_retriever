@@ -6,7 +6,8 @@ author = "parsa"
 
 [ml]
 type = "embeddings"
-provider = "litellm"
+provider = "local"
+model_dir = "./models"
 
 [observability]
 type = "phoenix"
@@ -17,11 +18,13 @@ name = "airplane-simple-retriver"
 inRepoPath = "./data"
 branchName = "dev"
 sourceBranch = "main"
-commitHash = "13c4e71c61b9aa9ddc7dcd22e9305bfdd2ff3d62b49f8e4b0bf2234c4b831ba0"
+commitHash = "bba2a3edc78115ed85d088064e96ae74a3a4b5b615cc2705ae2404b1d8e036f0"
 
 [project.dependencies]
 
 [ml.embeddings]
-model = "text-embedding-ada-002"
-timeout = 600
-caching = false
+port = 1111
+model_name = "airplane_simple_retriever_embeddings"
+alias = "champion"
+tracking = "mlflow"
+serving_tech = "liteserve"

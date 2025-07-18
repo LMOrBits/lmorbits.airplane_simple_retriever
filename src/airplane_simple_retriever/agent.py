@@ -1,20 +1,16 @@
 from airplane_simple_retriever.schemas import State
-from langchain_core.vectorstores.base import VectorStoreRetriever
-from airplane_simple_retriever.schemas import AnyMessage
-# from airplane_simple_retriever.config import vectorstore
+
 from airplane_simple_retriever.config import get_vector_store
 from langchain_community.document_transformers import EmbeddingsRedundantFilter
 from langchain.retrievers.document_compressors import EmbeddingsFilter , DocumentCompressorPipeline  
 from airplane_simple_retriever.config import model
 from airplane_simple_retriever.config import config
-from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain.retrievers import ContextualCompressionRetriever
 
 
 
 redundant_filter = EmbeddingsRedundantFilter(embeddings=model)
 relevant_filter = EmbeddingsFilter(embeddings=model, similarity_threshold=config.retriver.similarity_threshold)
-# _retriever = vectorstore.as_retriever(search_kwargs=config.retriver.search_kwargs)
 
 def pretty_print_docs(docs):
     answer = ""
